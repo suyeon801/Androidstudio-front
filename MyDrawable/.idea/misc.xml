@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyDrawable/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2935" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyDrawable/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2935" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyDrawable/app/src/main/res/drawable/rect_shape.xml" value="0.2935" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyDrawable/app/src/main/res/drawable/thumb_up.xml" value="0.366" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyDrawable/app/src/main/res/drawable/thumbnail_base.xml" value="0.2935" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyDrawable/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/suyeo/AdroidStudio/MyDrawable/app/src/main/res/drawable/linear_border.xml" value="0.209" />
         <entry key="..\:/Users/suyeo/AdroidStudio/MyDrawable/app/src/main/res/drawable/rect_shape.xml" value="0.195" />
