@@ -9,7 +9,10 @@
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/image11.xml" value="0.1945" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumb_down.xml" value="0.325" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumb_up.xml" value="0.128" />
-        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumbs_down_selector.xml" value="0.2585" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumbs_up_selector.xml" value="0.313" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/layout/activity_main.xml" value="0.4791889007470651" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/layout/comment_item_view.xml" value="0.5" />
       </map>
     </option>
   </component>

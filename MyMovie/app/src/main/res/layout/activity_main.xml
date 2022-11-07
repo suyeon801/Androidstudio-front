@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -72,12 +73,14 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/thumb_up" />
+                <Button
+                    android:id="@+id/likeButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/thumbs_up_selector" />
 
                 <TextView
+                    android:id="@+id/likeCountView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -86,13 +89,15 @@
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <Button
+                    android:id="@+id/dislikeButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginLeft="15dp"
-                    android:src="@drawable/thumb_down" />
+                    android:background="@drawable/thumbs_down_selector" />
 
                 <TextView
+                    android:id="@+id/dislikeCountView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -258,7 +263,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbarThumbVertical="#D5D5D5">
+        android:scrollbarThumbVertical="@color/black">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -400,10 +405,13 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-                <View
+
+                <ListView
+                    android:id="@+id/listView"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:background="@color/white"/>
+                    android:layout_height="wrap_content">
+                </ListView>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
