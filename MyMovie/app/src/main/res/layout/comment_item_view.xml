@@ -20,6 +20,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/user_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -34,21 +35,34 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/user_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10분전"
                 android:textSize="10dp"
                 android:textColor="#8C8C8C"/>
 
+            <RatingBar
+                android:id="@+id/ratingbar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="4.5" />
+
         </LinearLayout>
 
         <TextView
+            android:id="@+id/user_comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="적당히 재밌다.오랜만에 잠 안오는 영화 봤네요."
             android:textColor="@color/black"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="3dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -56,6 +70,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="추천 0     |"
@@ -64,6 +79,7 @@
                 />
 
             <TextView
+                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
