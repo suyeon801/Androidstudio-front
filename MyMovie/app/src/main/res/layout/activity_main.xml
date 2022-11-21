@@ -392,18 +392,19 @@
 
                             <ImageView
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:src="@drawable/ic_review_selected" />
 
-                            <TextView
+                            <Button
+
+                                android:id="@+id/commentButton"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="작성하기"
-                                android:textSize="18dp"
-                                android:textStyle="bold"
-                                android:textColor="#FF5E00"
+                                android:layout_height="match_parent"
                                 android:layout_marginLeft="8dp"
-                                />
+                                android:text="작성하기"
+                                android:textColor="#FF5E00"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

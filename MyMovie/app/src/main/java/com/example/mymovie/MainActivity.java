@@ -1,7 +1,9 @@
 package com.example.mymovie;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     boolean dislikeState = false;
 
     CommentAdapter commentAdapter;
+    Button commentButton;
+    TextView outputView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +86,17 @@ public class MainActivity extends AppCompatActivity {
         adapter.addItem(new CommentItem("kym71**", "10", "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
         adapter.addItem(new CommentItem("kym71**", "10", "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));
         listView.setAdapter(adapter);
+
+        //CommentButton 찾기
+        commentButton = (Button) findViewById(R.id.commentButton);
+        commentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCommentWriteActiviy();
+            }
+        });
+
+        outputView = (TextView) findViewById(R.id.user_comment);
     }
     //Adapter클래스 생성
     class CommentAdapter extends BaseAdapter {
@@ -139,5 +154,23 @@ public class MainActivity extends AppCompatActivity {
         dislikeCount -= 1;
         dislikeCountView.setText(String.valueOf(dislikeCount));
         dislikeButton.setBackgroundResource(R.drawable.ic_thumb_down);
+    }
+
+    //comment 작성
+    public void showCommentWriteActiviy(){
+        Intent intent = new Intent(getApplicationContext(), CommentWriteActivity.class);
+        startActivityForResult(intent, 101);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+
+        if(requestCode == 101){
+            if(intent != null){
+                String contents = intent.getStringExtra("contents");
+                outputView.setText(contents);
+            }
+        }
     }
 }

@@ -3,15 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/border.xml" value="0.362" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/chart_background.xml" value="0.3495" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/gradient_background.xml" value="0.1" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/gray_background.xml" value="0.325" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/image11.xml" value="0.1945" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/savedbutton.xml" value="0.363" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumb_down.xml" value="0.325" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumb_up.xml" value="0.128" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumbs_down_selector.xml" value="0.2585" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/drawable/thumbs_up_selector.xml" value="0.313" />
-        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/layout/activity_comment_write.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/DS/Adroidstudio-front/Adroidstudio-front/MyMovie/app/src/main/res/layout/comment_item_view.xml" value="0.5" />
       </map>
     </option>
