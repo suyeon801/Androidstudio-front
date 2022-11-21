@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        outputView = (TextView) findViewById(R.id.user_comment);
+        outputView = (TextView) findViewById(R.id.outputView);
     }
     //Adapter클래스 생성
     class CommentAdapter extends BaseAdapter {
