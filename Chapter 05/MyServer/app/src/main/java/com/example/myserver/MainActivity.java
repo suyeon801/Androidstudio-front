@@ -2,6 +2,7 @@ package com.example.myserver;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,11 +24,15 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ServerThread thread = new ServerThread();
-                thread.start();
+//                ServerThread thread = new ServerThread();
+//                thread.start();
+
+                Intent intent = new Intent(getApplicationContext(), ServerService.class);
+                startService(intent);
             }
         });
     }
+    /*
     class ServerThread extends Thread{
         public void run(){
             int port = 5001;
@@ -54,4 +59,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    */
 }

@@ -3,9 +3,11 @@ package com.example.mysocket;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -15,10 +17,15 @@ import kotlinx.coroutines.android.AndroidExceptionPreHandler;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView textView;
+    Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textView = (TextView)findViewById(R.id.textView);
 
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -42,9 +49,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("ClientThread", "서버로 보냄.");
 
                 ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
-                Object input = inStream.readObject();
+                final Object input = inStream.readObject();
                 //String input = (String) inStream.readObject();
                 Log.d("ClientThread", "받은 데이터 : "+input);
+
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView.setText("받은 데이터 : "+input);
+                    }
+                });
 
             }catch(Exception e){
                 e.printStackTrace();
