@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     CommentAdapter commentAdapter;
     Button commentButton;
     TextView outputView;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         dislikeCountView = (TextView) findViewById(R.id.dislikeCountView);
 
         //ListView 찾기
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
 
         CommentAdapter adapter = new CommentAdapter();
         adapter.addItem(new CommentItem("kym71**", "10", "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요."));

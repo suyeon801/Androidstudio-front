@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     int value = 0;
     ValueHandler handler = new ValueHandler();
 
+    Handler handler2 = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +32,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //객체 생성
-                BackgroundThread thread = new BackgroundThread;
-                thread.run();
+//                BackgroundThread thread = new BackgroundThread;
+//                thread.run();
 
-            }
+                new Thread(new Runnable() {
+                    public void run(){
+                        boolean running = false;
+
+                        running = true;
+                        while(running){
+                            value += 1;
+
+                            handler2.post(new Runnable() {
+                                public void run() {
+                                    textView.setText("현재 값 : "+value);
+                                }
+                            });
+
+                            try {
+                                Thread.sleep(1000);
+                            }catch (Exception e){}
+                        }
+                    };
+                }).start();
+            };
         });
 
         Button button2 = (Button) findViewById(R.id.button2);
@@ -44,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     //스레드 클래스 생성
     class BackgroundThread extends Thread{
+        int value = 0;
         boolean running = false;
 
         public void run(){
@@ -62,9 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     Thread.sleep(1000);
-                }catch (Exception e){
-
-                }
+                }catch (Exception e){}
             }
         }
     }
@@ -78,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundle = msg.getData();
             int value = bundle.getInt("value");
             textView.setText("현재 값 : "+value);
-
-            
         }
     }
 }

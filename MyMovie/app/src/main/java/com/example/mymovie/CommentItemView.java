@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CommentItemView extends LinearLayout {
     TextView user_id;
@@ -17,7 +18,6 @@ public class CommentItemView extends LinearLayout {
 
     public CommentItemView(Context context) {
         super(context);
-
         init(context);
     }
 
@@ -47,4 +47,5 @@ public class CommentItemView extends LinearLayout {
     public void setUser_comment(String user_comment) {
         this.user_comment.setText(user_comment);
     }
+
 }
