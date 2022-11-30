@@ -92,7 +92,6 @@
             android:text="취소"
             android:background="@drawable/savedbutton"/>
 
-
     </LinearLayout>
 
 </LinearLayout>

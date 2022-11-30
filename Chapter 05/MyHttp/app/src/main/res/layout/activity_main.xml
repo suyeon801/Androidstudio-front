@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="http://m.naver.com" />
+            android:text="https://www.naver.com" />
     </LinearLayout>
 
     <ScrollView

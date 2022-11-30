@@ -34,7 +34,6 @@ public class CommentWriteActivity extends AppCompatActivity {
         intent.putExtra("contents", contents);
 
         setResult(RESULT_OK, intent);
-
         finish();
     }
 }

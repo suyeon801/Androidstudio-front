@@ -426,16 +426,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_marginRight="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:gravity="center"
+                    <Button
+                        android:id="@+id/viewall"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/chart_background"
+                        android:gravity="center"
                         android:text="모두 보기"
-                        android:textSize="18dp"
                         android:textColor="#3F0099"
-                        android:background="@drawable/chart_background"/>
+                        android:textSize="18dp" />
+
 
                 </LinearLayout>
 

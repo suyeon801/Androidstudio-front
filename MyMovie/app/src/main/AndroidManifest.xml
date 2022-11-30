@@ -14,9 +14,13 @@
         android:theme="@style/Theme.MyMovie"
         tools:targetApi="31">
         <activity
+            android:name=".ListComment"
+            android:exported="false"
+            android:label="한줄평 목록"/>
+        <activity
             android:name=".CommentWriteActivity"
-            android:label="한줄평 작성"
-            android:exported="false" />
+            android:exported="false"
+            android:label="한줄평 작성" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
