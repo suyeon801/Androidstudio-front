@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int i, View convertView, ViewGroup parent) {
             SingeritemView view = null;
+
+            //view 재사용하기
             if(convertView == null){
                 view = new SingeritemView(getApplicationContext());
             }else{
