@@ -2,6 +2,7 @@ package com.example.mylist;
 
 public class SingerItem {
 
+    //멤버변수 설정
     String name;
     String mobile;
     int resID;

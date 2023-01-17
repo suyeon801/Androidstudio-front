@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         //ListView 객체 찾기
         ListView listView = (ListView) findViewById(R.id.listview);
 
+        //adapter 객체 생성
         adapter = new SingerAdapter();
+        //데이터 추가하기
         adapter.addItem(new SingerItem("소녀시대", "010-1000-1000", R.drawable.icon01));
         adapter.addItem(new SingerItem("걸스데이", "010-2000-2000", R.drawable.icon02));
         adapter.addItem(new SingerItem("여자친구", "010-3000-3000", R.drawable.icon03));
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        //event 처리
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //SingerAdapter 클래스 만들기
+    //SingerAdapter 클래스 만들기 - 데이터 관리
     class SingerAdapter extends BaseAdapter{
         ArrayList<SingerItem> items = new ArrayList<SingerItem>();
 
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             return items.size();
         }
 
+        //item 추가
         public void addItem(SingerItem item){
             items.add(item);
         }
@@ -96,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 view = (SingeritemView) convertView;
             }
 
+            //item안에 데이터가 존재
             SingerItem item = items.get(i);
             view.setName(item.getName());
             view.setMobile(item.getMobile());
