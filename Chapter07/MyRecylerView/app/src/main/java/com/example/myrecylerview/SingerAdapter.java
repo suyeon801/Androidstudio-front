@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,8 +15,15 @@ import java.util.ArrayList;
 public class SingerAdapter extends RecyclerView.Adapter<SingerAdapter.ViewHolder> {
     Context context;
 
+
     //각각의 Item을 보관
     ArrayList<SingerItem> items = new ArrayList<SingerItem>();
+
+    OnItemClickListener listener;
+    public static interface OnItemClickListener{
+        //메서드 생성
+        public void onItemClick(ViewHolder holder, View view, int position);
+    }
 
     //생성자
     public SingerAdapter(Context context){
@@ -40,6 +48,8 @@ public class SingerAdapter extends RecyclerView.Adapter<SingerAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
         SingerItem item = items.get(position);
         holder.setItem(item);
+
+        holder.setOnItemClickListener(listener);
     }
 
     //Item 추가
@@ -57,10 +67,16 @@ public class SingerAdapter extends RecyclerView.Adapter<SingerAdapter.ViewHolder
     }
 
 
+    //event 처리
+    public void setOnItemClickListener(OnItemClickListener listner){
+        this.listener = listner;
+    }
+
     //ViewHolder 클래스 정의
     static class ViewHolder extends RecyclerView.ViewHolder{
         TextView textView;
         TextView textView2;
+        OnItemClickListener listener;
 
         //Generate -> Constructor
         public ViewHolder(@NonNull View itemView) {
@@ -68,11 +84,27 @@ public class SingerAdapter extends RecyclerView.Adapter<SingerAdapter.ViewHolder
 
             textView =(TextView) itemView.findViewById(R.id.textView);
             textView2 =(TextView) itemView.findViewById(R.id.textView2);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+
+                    if(listener != null){
+                        listener.onItemClick(ViewHolder.this, view, position);
+                    }
+                }
+            });
         }
 
         public void setItem(SingerItem item){
             textView.setText(item.getName());
             textView2.setText(item.getMobile());
+        }
+
+        //event 처리
+        public void setOnItemClickListener(OnItemClickListener listner){
+            this.listener = listner;
         }
     }
 }
