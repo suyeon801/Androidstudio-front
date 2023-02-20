@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
 
     //핸들러 클래스 생성
     class ValueHandler extends Handler{
+
+        //Generate -> Override Methods -> handleMessage
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
